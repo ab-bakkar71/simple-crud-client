@@ -1,9 +1,13 @@
 import React from 'react';
+import { getUsers } from '../lib/data';
 
-const UserManagementPage = () => {
+const UserManagementPage = async() => {
+
+    const users = await getUsers();
+    console.log(users);
     return (
         <div>
-            User Management
+            User Management {users.length}
         </div>
     );
 };
