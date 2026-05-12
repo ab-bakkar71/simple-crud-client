@@ -1,5 +1,6 @@
 import React from 'react';
 import { getUsers } from '../lib/data';
+import UserTable from '../components/UserTable';
 
 const UserManagementPage = async() => {
 
@@ -8,6 +9,8 @@ const UserManagementPage = async() => {
     return (
         <div>
             User Management {users.length}
+
+       <UserTable users={users}/>
         </div>
     );
 };
